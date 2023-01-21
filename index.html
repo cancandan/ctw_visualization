@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <script src="//d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+    <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        CTW Algorithm Visualization
+      </h1>
+      
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-parent">
+            
+            <div class="block">
+                    <!-- <h3 class="title">Set up</h3> -->
+                    <div class="field">
+                        <label class="label">Sequence</label>
+                        <div class="control">
+                          <input id="inputSeq" class="input" type="text" oninput="inputChange()" onclick="inputFocus()" placeholder="eg. 012012">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Context Length</label>
+                        <div class="control">
+                          <input id="ctxLength" class="input" type="text" placeholder="eg. 3" oninput="inputChange()" onclick="inputFocus()">
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                          <button id="setInput" class="button is-link" disabled onclick="setInput()">Set</button>
+                        </div>  
+                        <div class="control">
+                            <button class="button is-link is-danger" disabled>Reset</button>
+                        </div>
+                        <div class="control">
+                            <button id="stepAlgo" class="button is-success" disabled onclick="stepAlgo()">Step</button>
+            
+                        </div>              
+                    </div>                                
+            </div>
+            <article class="message is-child">
+                <div class="message-header">
+                <p>Setting up the input</p>
+                </div>
+                <div class="message-body">
+                    Enter above the sequence and context length.
+                </div>
+            </article>
+        </div>
+        <div class="tile is-vertical">
+            <div id="sequence">            
+            </div>
+            <div id="tablo" class="block">
+            </div>
+        </div>
+        <div class="tile">
+            <div id="graph" class="block is-pulled-right">        
+            </div>
+        </div>
+      </div>  
+    </div>
+  </section>
+
+  <script src="obfuscated.js"></script>
+  </body>
+</html>
