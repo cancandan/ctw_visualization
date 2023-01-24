@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Context Tree Weighting Algorithm Visualization</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="index.css">
   </head>
@@ -25,7 +25,7 @@
                     <div class="field">
                         <label class="label">Sequence</label>
                         <div class="control">
-                          <input id="inputSeq" class="input" type="text" oninput="inputChange()" onclick="inputFocus()" placeholder="eg. 012012">
+                          <input id="inputSeq" class="input" type="text" oninput="inputChange()" onclick="inputFocus()" placeholder="eg. 001020102">
                         </div>
                     </div>
                     <div class="field">
@@ -49,7 +49,7 @@
                 <p>Setting up the input</p>
                 </div>
                 <div class="message-body">
-                    Enter above the sequence and context length.
+                    Enter above a sequence of digits 0 to 9, each digit is an element of the "alpahbet". For example the sequence "001020102" has symbols from the alphabet={0,1,2}  "Context" is the history of the sequence, hence its length should be less than the sequence length.
                 </div>
             </article>
         </div>
@@ -67,6 +67,6 @@
     </div>
   </section>
 
-  <script src="main.js"></script>
+  <script src="wip_bulma.js"></script>
   </body>
 </html>
